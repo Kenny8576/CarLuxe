@@ -27,7 +27,7 @@ services:
       context: .
       dockerfile: src/AuctionService/Dockerfile
     environment:
-      - ASPNETCORE=ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - RabbitMq__Host=rabbitmq
       - ConnectionStrings__DefaultConnection=Server=postgres:5432;User Id=postgres;Password=Kehinde8576;Database=Auction
@@ -43,7 +43,7 @@ services:
       context: .
       dockerfile: src/SearchService/Dockerfile
     environment:
-      - ASPNETCORE=ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
       - RabbitMq__Host=rabbitmq
       - ConnectionStrings__MongoDbConnection=mongodb://root:mongopw@mongodb
@@ -59,7 +59,7 @@ services:
       context: .
       dockerfile: src/IdentityService/Dockerfile
     environment:
-      - ASPNETCORE=ENVIRONMENT=Docker
+      - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__DefaultConnection=Server=postgres:5432;User Id=postgres;Password=Kehinde8576;Database=Identity
     ports:
@@ -72,7 +72,7 @@ services:
       context: .
       dockerfile: src/GatewayService/Dockerfile
     environment:
-      - ASPNETCORE=ENVIRONMENT=Docker
+      - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
     ports:
       - 6001:80

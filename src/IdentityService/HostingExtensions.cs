@@ -31,15 +31,11 @@ internal static class HostingExtensions
 
                 if (builder.Environment.IsEnvironment("Docker"))
                 {
-                    options.IssuerUri = "http://identity-svc";
+                    options.IssuerUri = "identity-svc";
                 }
-                //   else
-                //   {
-                // options.IssuerUri = "http://localhost:5000";
-                //  }
 
                 // see https://docs.duendesoftware.com/identityserver/v6/fundamentals/resources/
-                //options.EmitStaticAudienceClaim = true;
+                // options.EmitStaticAudienceClaim = true;
             })
             .AddInMemoryIdentityResources(Config.IdentityResources)
             .AddInMemoryApiScopes(Config.ApiScopes)

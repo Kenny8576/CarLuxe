@@ -13,20 +13,19 @@ COPY src/NotificationService/NotificationService.csproj src/NotificationService/
 COPY src/Contracts/Contracts.csproj src/Contracts/Contracts.csproj
 COPY src/IdentityService/IdentityService.csproj src/IdentityService/IdentityService.csproj
 
-
 # Restore package deps
 RUN dotnet restore Carluxe.sln
 
 # Copy the app folder over
-COPY src/IdentityService src/IdentityService
+COPY src/NotificationService src/NotificationService
 COPY src/Contracts src/Contracts
-WORKDIR /app/src/IdentityService
+WORKDIR /app/src/NotificationService
 RUN dotnet publish -c Release -o /app/src/out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/src/out .
-ENTRYPOINT [ "dotnet", "IdentityService.dll" ]
+ENTRYPOINT [ "dotnet", "NotificationService.dll" ]
 
 

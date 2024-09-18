@@ -39,7 +39,6 @@ public class BidController : ControllerBase
             auction = _grpcClient.GetAuction(auctionId);
 
             if ( auction == null ) return BadRequest("Cannot accept bids on this auction at this time");
-            
 
             return NotFound();
         }
@@ -59,8 +58,7 @@ public class BidController : ControllerBase
         if(auction.AuctionEnd < DateTime.UtcNow){
             bid.BidStatus = BidStatus.Finished;
         } else
-        {
-              
+        {   
         var highBid = await DB.Find<Bid>()
                      .Match(a =>a.AuctionId == auctionId )
                      .Sort(b => b.Descending(x => x.Amount))

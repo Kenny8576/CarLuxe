@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayService", "src\Gatew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiddingService", "src\BiddingService\BiddingService.csproj", "{2332E738-62AA-43D8-87AF-C767B656D7E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "src\NotificationService\NotificationService.csproj", "{D3CD6E9F-656C-4F45-8EAC-3F87160163AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{2332E738-62AA-43D8-87AF-C767B656D7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2332E738-62AA-43D8-87AF-C767B656D7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2332E738-62AA-43D8-87AF-C767B656D7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3CD6E9F-656C-4F45-8EAC-3F87160163AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3CD6E9F-656C-4F45-8EAC-3F87160163AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3CD6E9F-656C-4F45-8EAC-3F87160163AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3CD6E9F-656C-4F45-8EAC-3F87160163AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +64,6 @@ Global
 		{4CBB9C27-3130-4538-AB12-A5BBBAB21231} = {6F622EBD-0648-42F7-9034-CDABB55EB938}
 		{0CF73B14-0CDC-493C-B369-397FD8DC578E} = {6F622EBD-0648-42F7-9034-CDABB55EB938}
 		{2332E738-62AA-43D8-87AF-C767B656D7E8} = {6F622EBD-0648-42F7-9034-CDABB55EB938}
+		{D3CD6E9F-656C-4F45-8EAC-3F87160163AF} = {6F622EBD-0648-42F7-9034-CDABB55EB938}
 	EndGlobalSection
 EndGlobal

@@ -11,7 +11,7 @@ export async function getData(query: string): Promise<PagedResult<Auction>> {
     return res.json();
 }
 
-export async function UpdateAuctionTest() {
+export async function updateAuctionTest() {
     const data = {
         mileage : Math.floor(Math.random() * 10000) + 1
     }

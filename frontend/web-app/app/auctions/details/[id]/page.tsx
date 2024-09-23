@@ -4,15 +4,15 @@ import React from 'react'
 import CountdownTimer from '../../CountdownTimer';
 import CarImage from '../../CarImage';
 import { getCurrentUser } from '@/app/actions/authActions';
-import BidItem from './BidItem';
-import BidList from './BidList';
 import DetailedSpecs from './DetailedSpecs';
 import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
+import BidList from './BidList';
 
 export default async function Details({ params }: { params: { id: string } }) {
   const data = await getDetailedViewData(params.id);
   const user = await getCurrentUser();
+  const bids = await getBidsForAuction(params.id)
 
   return (
     <div>
